@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import OktaProvider from "next-auth/providers/okta";
-
+//setting up Okta authentication
 export default NextAuth({
   providers: [
     OktaProvider({

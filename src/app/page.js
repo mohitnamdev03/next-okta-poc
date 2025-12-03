@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <div className="">
       <h1>Hey</h1>
+      //conditionally rendering the Signin/Signout buttons based on session
       {session ? (
         <>
         <p>User is {session.user?.email || session.user?.name}</p>

@@ -8,9 +8,9 @@ import { signOut } from "next-auth/react";
 export default async function Dashboard(){
     const session = await getServerSession(Nextauth);
     
+    // Checks the user signin or not, if not redirects to Signin page
     if(!session){
         const callbackUrl = "/dashboard";
-        // Ensure you have the sign-in page set up correctly or use the default
         redirect(`/api/auth/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`);
     }
 
