@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function Home() {
   const {data:session} = useSession();
   return (
+    //conditionally rendering the Signin/Signout buttons based on session
     <div className="">
       <h1>Hey</h1>
-      //conditionally rendering the Signin/Signout buttons based on session
       {session ? (
         <>
         <p>User is {session.user?.email || session.user?.name}</p>
